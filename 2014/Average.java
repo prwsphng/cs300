@@ -1,3 +1,4 @@
+// to find the 30% of ค่าระดับของเสียจากบริเวณรอบอ่างทดลองของสาหร่ายแต่ละชนิด
 import java.util.*;
 public class Average{
     public static void main(String[] args) {
