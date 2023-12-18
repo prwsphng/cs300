@@ -1,29 +1,29 @@
 import java.util.*;
-public class Income{
+public class Income {
     public static void main(String[] args) {
-
+        // number of arr
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
 
+        // create array
         int arr[] = new int[num];
-
-        for(int i=0; i<num; i++){
+        for(int i=0; i<arr.length; i++){
             arr[i] = scan.nextInt();
         }
 
+        //sorting array
         Arrays.sort(arr);
-        
-        if(arr.length %2 == 1){
-            int tmp = arr.length / 2;
-            int result1 = arr[tmp];
-            System.out.println(result1);
+
+        // conditions
+        if(arr.length % 2 == 1){
+            int index = arr.length / 2;
+            System.out.println(arr[index]);
         }
         else{
-            int tmp1 = arr.length / 2 - 1;
-            int tmp2 = arr.length / 2;
-            double tmp3 = (arr[tmp1] + arr[tmp2]) / 2.0;
-            int result2 = (int) Math.ceil(tmp3);
-            System.out.println(result2);
+            int mid1 = (arr.length / 2) -1;
+            int mid2 = arr.length / 2;
+            int median = (int)Math.ceil((arr[mid1] + arr[mid2]) / 2.0);
+            System.out.println(median);
         }
         scan.close();
     }
